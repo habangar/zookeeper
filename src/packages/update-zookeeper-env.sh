@@ -142,6 +142,7 @@ else
 
   if [ ! -d ${VAR_DIR} ]; then
     mkdir -p ${VAR_DIR}/data
+    ln -s /etc/zookeeper/myid ${VAR_DIR}/data/myid
     chown -R zookeeper:hadoop ${VAR_DIR}
     chmod -R 755 ${VAR_DIR}
   fi
@@ -160,4 +161,5 @@ else
   template_generator ${PREFIX}/share/zookeeper/templates/conf/zoo.cfg $TFILE
   cp ${TFILE} ${CONF_DIR}/zoo.cfg
   rm -f ${TFILE}
+  update-rc.d zookeeper defaults 98 02
 fi
