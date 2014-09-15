@@ -161,5 +161,4 @@ else
   template_generator ${PREFIX}/share/zookeeper/templates/conf/zoo.cfg $TFILE
   cp ${TFILE} ${CONF_DIR}/zoo.cfg
   rm -f ${TFILE}
-  update-rc.d zookeeper defaults 98 02
 fi
