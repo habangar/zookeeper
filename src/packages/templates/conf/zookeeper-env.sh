@@ -15,5 +15,5 @@
 #export JAVA_HOME=${JAVA_HOME}
 export ZOO_LOG_DIR=${LOG_DIR}
 export JMXDISABLE=true
-JMXFLAGS="-Djava.rmi.server.hostname=`hostname` -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=8686 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false"
+JMXFLAGS="-Djava.rmi.server.hostname=127.0.0.1 -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=8686 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false"
 export JVMFLAGS="$JMXFLAGS -Xms2g -Xmx2g"
